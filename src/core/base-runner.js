@@ -3,7 +3,7 @@
 // The module in charge of running the whole processing pipeline.
 import "./include-config.js";
 import "./override-configuration.js";
-import "./respec-ready.js";
+import { init as initReSpecGlobal } from "./respec-global.js";
 import { done as postProcessDone } from "./post-process.js";
 import { done as preProcessDone } from "./pre-process.js";
 import { pub } from "./pubsubhub.js";
@@ -49,6 +49,8 @@ function isRunnableModule(plug) {
 }
 
 export async function runAll(plugs) {
+  initReSpecGlobal();
+
   pub("start-all", respecConfig);
   performance.mark(`${name}-start`);
   await preProcessDone;
@@ -62,7 +64,7 @@ export async function runAll(plugs) {
   }
   pub("plugins-done", respecConfig);
   await postProcessDone;
-  pub("end-all", respecConfig);
+  pub("end-all");
   removeReSpec(document);
   performance.mark(`${name}-end`);
   performance.measure(name, `${name}-start`, `${name}-end`);

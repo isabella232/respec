@@ -22,6 +22,9 @@ const localizationStrings = {
   de: {
     save_snapshot: "Exportieren",
   },
+  zh: {
+    save_snapshot: "导出",
+  },
 };
 const l10n = getIntlData(localizationStrings);
 
@@ -76,7 +79,7 @@ function toDownloadLink(details) {
 
 const saveDialog = {
   async show(button) {
-    await document.respecIsReady;
+    await document.respec.ready;
     const div = html`<div class="respec-save-buttons">
       ${downloadLinks.map(toDownloadLink)}
     </div>`;

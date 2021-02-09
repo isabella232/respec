@@ -50,8 +50,14 @@ async function runRespec2html() {
   server.listen(port);
 
   const errors = new Set();
-
-  for (const [i, exe] of executables.entries()) {
+  // Incrementally spawn processes and add them to process counter.
+  const executables = testURLs.map(url => {
+    const disableSandbox = process.env.TRAVIS ? " --disable-sandbox" : "";
+    const cmd = `node ./tools/respec2html.js -e${disableSandbox} --timeout 30 --src ${url}`;
+    return toExecutable(cmd);
+  });
+  let testCount = 1;
+  for (const exe of executables) {
     try {
       const testInfo = colors.green(`(test ${i + 1}/${executables.length})`);
       const msg = ` 👷‍♀️  ${exe.cmd} ${testInfo}`;
