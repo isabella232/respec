@@ -133,7 +133,7 @@ async function useLocalReSpec(page) {
     const respecProfileRegex = /\/(respec-[\w-]+)(?:\.js)?$/;
     const profile = url.pathname.match(respecProfileRegex)[1];
     const localPath = path.join(__dirname, "..", "builds", `${profile}.js`);
-    console.log(colors.info(`Intercepted ${url} to respond with ${localPath}`));
+    console.log(`Intercepted ${url} to respond with ${localPath}`);
     await request.respond({
       contentType: "text/javascript; charset=utf-8",
       body: await readFile(localPath),
