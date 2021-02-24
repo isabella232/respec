@@ -71,11 +71,17 @@ async function run(source, destination, options) {
       console.error(
         colors.error(`💥 ReSpec error: ${colors.debug(error.message)}`)
       );
+      if (error.elements) {
+        console.log(error.loc);
+      }
     },
     onWarning(warning) {
       console.warn(
         colors.warn(`⚠️ ReSpec warning: ${colors.debug(warning.message)}`)
       );
+      if (warning.elements) {
+        console.log(warning.loc);
+      }
     },
     disableSandbox: options["disable-sandbox"],
     devtools: options.devtools,

@@ -277,6 +277,20 @@ function handleConsoleMessages(page, onError, onWarning) {
         return JSON.stringify({ message: String(obj) });
       } else {
         // Ideally: `obj instanceof RsError` and `RsError instanceof Error`.
+        if (obj.elements) {
+          const loc = obj.elements.map(el => {
+            if (
+              el.nextSibling?.nodeType === Node.COMMENT_NODE &&
+              /respec-line: \d+/.test(el.nextSibling.textContent)
+            ) {
+              const lineNum = el.nextSibling.textContent.split(":")[1].trim();
+              return parseInt(lineNum, 10);
+            }
+            return 0;
+          });
+          const result = { ...JSON.parse(JSON.stringify(obj)), loc };
+          return JSON.stringify(result);
+        }
         return JSON.stringify(obj);
       }
     }, handle);

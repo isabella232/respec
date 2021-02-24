@@ -1,117 +1,117 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>
-      Replace me with a real title
-    </title>
-    <script src='../profiles/w3c.js' async class='remove'></script>
-    <script class='remove'>
-      var respecConfig = {
-        specStatus: "ED",
-        subtitle: "Subtitle",
-        shortName: "shortname-api",
-        editors: [{
-          name: "Your Name",
-          url: "https://your-site.com",
-        }],
-        github: "https://github.com/w3c/some-API/",
-        testSuiteURI: "https://w3c-test.org/some-API/",
-        implementationReportURI: "https://w3c.github.io/test-results/some-API",
-      };
-    </script>
-  </head>
-  <body>
-    <section id='abstract'>
-      <p>
-        This is required.
-      </p>
-    </section>
-    <section id='sotd'>
-      <p>
-        This is required.
-      </p>
-    </section>
-    <section class="introductory" id="overview">
-      <h2>
-        Overview
-      </h2>
-      <p>
-        This section has a CSS class "<code>introductory</code>", which means
-        it will not appear in the <abbr title="Table of Contents">TOC</abbr>.
-        Example Link to Section <a href="#logo"></a>.
-      </p>
-    </section>
-    <section class="informative" id="intro">
-      <h2>
-        Introduction
-      </h2>
-      <p>
-        This section has a CSS class "<code>informative</code>", so it is
-        listed in the TOC. ReSpec will list this reference as non-normative
-        since this is an informative section [[DOM]].
-      </p>
-    </section>
-    <section data-dfn-for="Foo">
-      <h2>
-        <dfn>Foo</dfn> interface
-      </h2>
-      <pre class="idl">
-      [Exposed=Window]
-      interface Foo {
-        constructor();
-        attribute DOMString bar;
-        undefined doTheFoo();
-      };
-      </pre>
-      <p>
-        The <a>Foo</a> interface is nice. Lets you do stuff.
-      </p>
-      <p>
-        The <dfn>Foo.constructor()</dfn> creates a Foo instance.
-      </p>
-      <p>
-        The <dfn>bar</dfn> attribute, returns 🍺.
-      </p>
-      <p>
-        The <dfn>doTheFoo()</dfn> method, returns nothing.
-      </p>
-      <p>
-        ReSpec will list this reference as normative [[ECMASCRIPT]].
-      </p>
-      <p>
-        This is an example of a non-normative reference in a normative section
-        [[?HTML]]
-      </p>
-      <pre class="js example" title="Usage example">
-        const foo = new Foo();
-        if (foo.bar === "my bar") {
-          foo.doTheBar();
-        }
-      </pre>
-    </section>
-    <section id="logo">
-      <h2>
-        Figure
-      </h2>
-      <figure id="figure">
-        <img src="figure.svg" alt="W3C Logo">
-        <figcaption>
-          The W3C logo
-        </figcaption>
-      </figure>
-      <p>
-        Link to <a href="#figure"></a>
-      </p>
-    </section>
-    <section id="idl-index" class="appendix">
-      <h2>
-        IDL Index
-      </h2>
-      <p>
-        All the Web IDL in this specification is collected in this section.
-      </p>
-    </section>
-    <section id="tof" class="informative appendix"></section>
-  </body>
-</html>
+<!DOCTYPE html><!-- respec-line: 1 -->
+<html><!-- respec-line: 2 -->
+  <head><!-- respec-line: 3 -->
+    <meta charset='utf-8'><!-- respec-line: 4 -->
+    <title><!-- respec-line: 5 -->
+      Replace me with a real title<!-- respec-line: 6 -->
+    </title><!-- respec-line: 7 -->
+    <script src='../builds/respec-w3c.js' async class='remove'></script><!-- respec-line: 8 -->
+    <script class='remove'><!-- respec-line: 9 -->
+      var respecConfig = {<!-- respec-line: 10 -->
+        specStatus: "ED",<!-- respec-line: 11 -->
+        subtitle: "Subtitle",<!-- respec-line: 12 -->
+        shortName: "shortname-api",<!-- respec-line: 13 -->
+        editors: [{<!-- respec-line: 14 -->
+          name: "Your Name",<!-- respec-line: 15 -->
+          url: "https://your-site.com",<!-- respec-line: 16 -->
+        }],<!-- respec-line: 17 -->
+        github: "https://github.com/w3c/some-API/",<!-- respec-line: 18 -->
+        lint: { "check-punctuation": true },<!-- respec-line: 19 -->
+        implementationReportURI: "https://w3c.github.io/test-results/some-API",<!-- respec-line: 20 -->
+      };<!-- respec-line: 21 -->
+    </script><!-- respec-line: 22 -->
+  </head><!-- respec-line: 23 -->
+  <body><!-- respec-line: 24 -->
+    <section id='abstract'><!-- respec-line: 25 -->
+      <p><!-- respec-line: 26 -->
+        This is required.<!-- respec-line: 27 -->
+      </p><!-- respec-line: 28 -->
+    </section><!-- respec-line: 29 -->
+    <section id='sotd'><!-- respec-line: 30 -->
+      <p><!-- respec-line: 31 -->
+        This is required.<!-- respec-line: 32 -->
+      </p><!-- respec-line: 33 -->
+    </section><!-- respec-line: 34 -->
+    <section class="introductory" id="overview"><!-- respec-line: 35 -->
+      <h2><!-- respec-line: 36 -->
+        Overview<!-- respec-line: 37 -->
+      </h2><!-- respec-line: 38 -->
+      <p><!-- respec-line: 39 -->
+        This section has a CSS class "<code>introductory</code>", which means<!-- respec-line: 40 -->
+        it will not appear in the <abbr title="Table of Contents">TOC</abbr>.<!-- respec-line: 41 -->
+        Example Link to Section.<!-- respec-line: 42 -->
+      </p><!-- respec-line: 43 -->
+    </section><!-- respec-line: 44 -->
+    <section class="informative" id="intro"><!-- respec-line: 45 -->
+      <h2><!-- respec-line: 46 -->
+        Introduction<!-- respec-line: 47 -->
+      </h2><!-- respec-line: 48 -->
+      <p><!-- respec-line: 49 -->
+        This section has a CSS class "<code>informative</code>", so it is<!-- respec-line: 50 -->
+        listed in the TOC. ReSpec will list this reference as non-normative<!-- respec-line: 51 -->
+        since this is an informative section [[DOM]].<!-- respec-line: 52 -->
+      </p><!-- respec-line: 53 -->
+    </section><!-- respec-line: 54 -->
+    <section data-dfn-for="Foo"><!-- respec-line: 55 -->
+      <h2><!-- respec-line: 56 -->
+        <dfn>Foo</dfn> interface<!-- respec-line: 57 -->
+      </h2><!-- respec-line: 58 -->
+      <pre class="idl"><!-- respec-line: 59 -->
+      [Exposed=Window]<!-- respec-line: 60 -->
+      interface Foo {<!-- respec-line: 61 -->
+        constructor();<!-- respec-line: 62 -->
+        attribute DOMString bar;<!-- respec-line: 63 -->
+        undefined doTheFoo();<!-- respec-line: 64 -->
+      };<!-- respec-line: 65 -->
+      </pre><!-- respec-line: 66 -->
+      <p><!-- respec-line: 67 -->
+        The <a>Foo</a> interface is nice. Lets you do stuff.<!-- respec-line: 68 -->
+      </p><!-- respec-line: 69 -->
+      <p><!-- respec-line: 70 -->
+        The <dfn>Foo.constructor()</dfn> creates a Foo instance.<!-- respec-line: 71 -->
+      </p><!-- respec-line: 72 -->
+      <p><!-- respec-line: 73 -->
+        The <dfn>bar</dfn> attribute, returns 🍺.<!-- respec-line: 74 -->
+      </p><!-- respec-line: 75 -->
+      <p><!-- respec-line: 76 -->
+        The <dfn>doTheFoo()</dfn> method, returns nothing<!-- respec-line: 77 -->
+      </p><!-- respec-line: 78 -->
+      <p><!-- respec-line: 79 -->
+        ReSpec will list this reference as normative [[ECMASCRIPT]].<!-- respec-line: 80 -->
+      </p><!-- respec-line: 81 -->
+      <p><!-- respec-line: 82 -->
+        This is an example of a non-normative reference in a normative section<!-- respec-line: 83 -->
+        [[?HTML]]<!-- respec-line: 84 -->
+      </p><!-- respec-line: 85 -->
+      <pre class="js example" title="Usage example"><!-- respec-line: 86 -->
+        const foo = new Foo();<!-- respec-line: 87 -->
+        if (foo.bar === "my bar") {<!-- respec-line: 88 -->
+          foo.doTheBar();<!-- respec-line: 89 -->
+        }<!-- respec-line: 90 -->
+      </pre><!-- respec-line: 91 -->
+    </section><!-- respec-line: 92 -->
+    <section id="logo"><!-- respec-line: 93 -->
+      <h2><!-- respec-line: 94 -->
+        Figure<!-- respec-line: 95 -->
+      </h2><!-- respec-line: 96 -->
+      <figure id="figure"><!-- respec-line: 97 -->
+        <img src="figure.svg" alt="W3C Logo"><!-- respec-line: 98 -->
+        <figcaption><!-- respec-line: 99 -->
+          The W3C logo<!-- respec-line: 100 -->
+        </figcaption><!-- respec-line: 101 -->
+      </figure><!-- respec-line: 102 -->
+      <p><!-- respec-line: 103 -->
+        Link to <a href="#figure"></a>.<!-- respec-line: 104 -->
+      </p><!-- respec-line: 105 -->
+    </section><!-- respec-line: 106 -->
+    <section id="idl-index" class="appendix"><!-- respec-line: 107 -->
+      <h2><!-- respec-line: 108 -->
+        IDL Index<!-- respec-line: 109 -->
+      </h2><!-- respec-line: 110 -->
+      <p><!-- respec-line: 111 -->
+        All the Web IDL in this specification is collected in this section.<!-- respec-line: 112 -->
+      </p><!-- respec-line: 113 -->
+    </section><!-- respec-line: 114 -->
+    <section id="tof" class="informative appendix"></section><!-- respec-line: 115 -->
+  </body><!-- respec-line: 116 -->
+</html><!-- respec-line: 117 -->
